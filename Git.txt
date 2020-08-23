@@ -1,0 +1,123 @@
+LOCAL REPO::::
+---------------
+
+yum install git
+
+git config --global user.name ranjit
+git config --global user.email ranjit.vnv@gmail.com
+
+mkdir new
+
+cd new
+
+git init
+
+ls -altr
+
+touch ganesh.txt
+touch new.txt
+touch ganesh.java
+
+
+git status
+
+git add ganesh.txt ganesh.java  (or)  git add .
+
+What are the untracked file?
+
+git commit -m "First commit"
+==================================================================================================================
+
+git ls-files
+git -ls-tree --full-tree -r HEAD
+
+git status
+
+vi ganesh.java
+
+update somthing in the file
+
+git diff
+
+git status
+
+ganesh.java was edited in staging area.
+
+git status
+
+git add .
+
+git commit -m "final commit"
+
+git rm --cached  test.txt
+ above command remove from the git repository
+
+git rm ganesh.class
+
+this command will remove in both repositoy and in the local system
+
+git rm -f test.txt
+
+----------------------------------------------------------------------------------------------------------------
+
+touch test.class ganesh1.txt edureka.txt demofile.java
+
+If I don't want git to track the file is 
+
+vi .gitignore
+*.txt
+:wq!
+
+git status
+
+git will ignore the all txt files
+
+=========================================================================================
+
+git commit --amend
+
+most recent commit message can be changed
+
+
+git log
+
+git tag -a 'v1.3' -m 'version1.3'
+
+git tag
+
+git tag -a 'v1.2' -m 'version1.2'
+
+git show
+
+======================================================================================================
+
+create online got repository in git hub
+
+git remote add <reositoryname in github> <remote git hub url>
+
+above command register the repository with remote repo
+
+git push demoganesh master
+
+here demeganesh is the reository name
+
+git push demoganesh --tags
+
+=======================================================================================================
+if I create a file in remote repository and try to push fome sile from local 
+it will reject the pust due to mismatch
+
+git remote -v
+
+git fetch demoganesh
+above command sync metadata but it will not download the file.
+
+git pull demoganesh master
+this will sync the metadata and file also
+
+git push origin master
+
+
+
+ 
+
