@@ -1,0 +1,9 @@
+continuous intigration:
+
+. what is continuous intigration?
+
+Git-->Jenkins---> build, unit test, function test, Deploy, 
+
+Maven:
+
+Developers write pom.xml

@@ -1,0 +1,63 @@
+Docker :
+=========
+
+docker images
+docker search
+docker ps
+docker ps -a
+docker help
+docker run -itd <image name>
+docker run it
+docker attach
+docker exec
+docker inspect container
+
+
+How a container is light weight?
+
+if any modification that we want to modify we need to go for vm in general. But we can modify the conatiner and we can turn that to image to transfer.
+
+Lightweight: Containers share the machine's OS system kernel and therefore do not require an OS per application, driving higher server efficiencies and reducing server and licensing costs.
+==========================================================================================
+Volume:
+
+mkdir testproj
+cd testproj
+
+docker  run -it -v "$PWD":/tmp ubuntu:latest /bin/bash
+
+#cd /tmp
+touch java.class
+
+#exit
+
+ls
+java.class
+===========================================================================================
+
+
+docker  run -it  ubuntu:latest /bin/bash vsleep 360
+
+docker  run -it  --name containeredu  ubuntu:latest /bin/bash
+
+cd /root
+
+touch test.txt
+
+exit
+
+docker cp containeredu:/root/test.txt .  # from host os
+
+
+docker cp hostfile.txt containeredu:/root/hostfile.txt   # from container
+
+===========================================================================================
+
+
+what is base image:
+
+base image is the initial image on which the customization has to be made.
+
+what is the expose in docker file?
+
+The EXPOSE instruction informs Docker that the container listens on the specified network ports at runtime.
